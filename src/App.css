@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+
+:root {
+  --color-brand-1: hsl(227, 35%, 25%);
+  --color-brand-2: hsl(225, 20%, 60%);
+  --color-brand-3: hsl(15, 100%, 70%);
+  --color-brand-4: hsl(226, 100%, 87%);
+
+  --color-site-1: hsl(230, 100%, 99%);
+  --color-site-2: hsl(0, 0%, 100%);
+  --color-site-3: hsl(174, 77%, 80%);
+  --color-site-4: hsl(174, 86%, 45%);
+  --color-site-5: hsl(224, 65%, 95%);
+  --color-site-6: hsl(223, 50%, 87%);
+  --color-site-7: hsl(14, 92%, 95%);
+
+  --font-manrope: "Manrope", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-manrope);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style: none;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  background: url("./assets/bg-pattern.svg");
+  background-position: top;
+  background-size: 100% 70%;
+  background-repeat: no-repeat;
+}
+
+header {
+  text-align: center;
+  padding: 8rem 2rem;
+  background: url("./assets/pattern-circles.svg");
+  background-position: center;
+  background-size: 16rem 16rem;
+  background-repeat: no-repeat;
+}
+
+.Title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-brand-1);
+}
+
+.Para {
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  color: var(--color-brand-2);
+  max-width: 22rem;
+  margin: 0 auto 1.5rem;
+}
+
+main {
+  background-color: var(--color-site-2);
+  text-align: center;
+  padding: 3rem 0;
+  width: 90%;
+  margin: auto;
+  border-radius: 1rem;
+}
+
+.BillingBox {
+  padding: 0 2rem;
+}
+
+.BillingBox-Title {
+  font-size: 1.8rem;
+  color: var(--color-brand-2);
+  text-transform: uppercase;
+  margin-bottom: 3.5rem;
+}
+
+.InputRange {
+  height: 1.2rem;
+  border-radius: 1.6rem;
+  appearance: none;
+  -webkit-appearance: none;
+  margin-bottom: 3.5rem;
+  width: 100%;
+  outline: none;
+  border: none;
+  background: var(--color-site-5);
+}
+.InputRange:focus {
+  outline: none;
+}
+
+.InputRange::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1.2rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+.InputRange::-webkit-slider-thumb {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background: url("./assets/icon-slider.svg");
+  background-position: center;
+  background-size: 1.75rem 1.75rem;
+  background-repeat: no-repeat;
+  background-color: var(--color-site-4);
+  cursor: grab;
+  appearance: none;
+  -webkit-appearance: none;
+  margin-top: -0.9rem;
+  box-shadow: 0px 6px 20px var(--color-site-4);
+}
+
+.InputRange::-moz-range-track {
+  width: 100%;
+  height: 1.2rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+.InputRange::-moz-range-thumb {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background: url("./assets/icon-slider.svg");
+  background-position: center;
+  background-size: 1.75rem 1.75rem;
+  background-repeat: no-repeat;
+  background-color: var(--color-site-4);
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  margin-top: -0.9rem;
+}
+
+.BillingBox-Bill {
+  margin-bottom: 2rem;
+}
+
+.BillingBox-Bill > strong {
+  font-size: 2.4rem;
+  color: var(--color-brand-1);
+}
+
+.BillingBox-Bill > span {
+  font-size: 1.6rem;
+  margin-left: 0.5rem;
+  color: var(--color-brand-2);
+}
+
+.BillingMethod {
+  margin-bottom: 2rem;
+  padding-bottom: 3.5rem;
+  border-bottom: 1px solid var(--color-site-6);
+}
+
+.BillingMethod > label,
+.BillingMethod-Year {
+  font-size: 1.4rem;
+  color: var(--color-brand-2);
+  text-transform: capitalize;
+  margin-right: 0.8rem;
+}
+
+.BillingMethod > label > input {
+  margin-left: 0.8rem;
+  appearance: none;
+  -webkit-appearance: none;
+  display: inline-block;
+  cursor: pointer;
+  width: 4rem;
+  height: 2rem;
+  border: 1px solid var(--color-site-6);
+  border-radius: 1rem;
+  margin-bottom: -0.7rem;
+  background-color: var(--color-site-6);
+  position: relative;
+}
+
+.BillingMethod > label > input:hover {
+  background-color: var(--color-site-4);
+}
+
+.BillingMethod > label > input::before {
+  content: "";
+  display: block;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0.2rem;
+  transform: translateY(-50%);
+  background-color: var(--color-site-2);
+}
+
+.BillingMethod > label > input:checked:before {
+  content: "";
+  display: block;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: 0.2rem;
+  left: auto;
+  transform: translateY(-50%);
+  background-color: var(--color-site-2);
+}
+
+.BillingMethod-Discount {
+  display: inline-block;
+  color: var(--color-brand-3);
+  font-size: 1.4rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  background-color: var(--color-site-7);
+}
+
+.Desktop {
+  display: none;
+}
+
+.TrialBox-Features {
+  margin: 3rem 0;
+}
+
+.TrialBox-Features > li {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  color: var(--color-brand-2);
+}
+
+.TrialBox-Features > li > img {
+  width: 1.25rem;
+  margin-right: 0.5rem;
+}
+
+.TrialBox-TrialBtn {
+  background-color: var(--color-brand-1);
+  color: var(--color-site-6);
+  padding: 1.5rem 3rem;
+  font-size: 1.6rem;
+  border-radius: 2.5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    background-size: 24rem 24rem;
+  }
+
+  .Title {
+    font-size: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .Para {
+    font-size: 2rem;
+    max-width: 29rem;
+    line-height: 3rem;
+  }
+
+  main {
+    max-width: 80rem;
+    margin-bottom: 3rem;
+  }
+
+  .BillingBox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding: 0 4rem;
+  }
+
+  .BillingBox-Title {
+    grid-area: 1/1/1/1;
+    margin-bottom: 0;
+    margin-right: auto;
+  }
+
+  .InputRange {
+    grid-area: 2/1/2/3;
+  }
+
+  .BillingBox-Bill {
+    grid-area: 1/2/2/2;
+    margin-bottom: 0;
+    margin-left: auto;
+  }
+
+  .Mobile {
+    display: none;
+  }
+
+  .Desktop {
+    display: inline-block;
+  }
+
+  .TrialBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding: 0 4rem;
+  }
+}
