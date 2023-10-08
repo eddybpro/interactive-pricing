@@ -38,6 +38,7 @@ function App() {
               value={rangeVal}
               onChange={handleChange}
               ref={sliderEl}
+              aria-label="Bill range"
             />
           </label>
           <div className="BillingBox-Bill">
