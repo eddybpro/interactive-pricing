@@ -86,6 +86,10 @@ main {
   margin-bottom: 3.5rem;
 }
 
+.BillingBox-SliderLabel {
+  width: 100%;
+}
+
 .InputRange {
   height: 1.2rem;
   border-radius: 1.6rem;
@@ -165,7 +169,7 @@ main {
   border-bottom: 1px solid var(--color-site-6);
 }
 
-.BillingMethod > label,
+.BillingMethod-BillLabel,
 .BillingMethod-Year {
   font-size: 1.4rem;
   color: var(--color-brand-2);
@@ -173,7 +177,7 @@ main {
   margin-right: 0.8rem;
 }
 
-.BillingMethod > label > input {
+.BillingMethod-BillLabel > input {
   margin-left: 0.8rem;
   appearance: none;
   -webkit-appearance: none;
@@ -188,11 +192,11 @@ main {
   position: relative;
 }
 
-.BillingMethod > label > input:hover {
+.BillingMethod-BillLabel > input:hover {
   background-color: var(--color-site-4);
 }
 
-.BillingMethod > label > input::before {
+.BillingMethod-BillLabel > input::before {
   content: "";
   display: block;
   width: 1.4rem;
@@ -205,7 +209,7 @@ main {
   background-color: var(--color-site-2);
 }
 
-.BillingMethod > label > input:checked:before {
+.BillingMethod-BillLabel > input:checked:before {
   content: "";
   display: block;
   width: 1.4rem;
@@ -295,7 +299,7 @@ main {
     margin-right: auto;
   }
 
-  .InputRange {
+  .BillingBox-SliderLabel {
     grid-area: 2/1/2/3;
   }
 

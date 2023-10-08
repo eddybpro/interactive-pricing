@@ -27,24 +27,26 @@ function App() {
       <main>
         <div className="BillingBox">
           <h2 className="BillingBox-Title">100k pageviews</h2>
-          <input
-            type="range"
-            name="slider"
-            id="slider"
-            className="InputRange"
-            min="0"
-            max="100"
-            value={rangeVal}
-            onChange={handleChange}
-            ref={sliderEl}
-          />
+          <label htmlFor="slider" className="BillingBox-SliderLabel">
+            <input
+              type="range"
+              name="slider"
+              id="slider"
+              className="InputRange"
+              min="0"
+              max="100"
+              value={rangeVal}
+              onChange={handleChange}
+              ref={sliderEl}
+            />
+          </label>
           <div className="BillingBox-Bill">
             <strong>$16.00</strong>
             <span>/month</span>
           </div>
         </div>
         <div className="BillingMethod">
-          <label htmlFor="bill">
+          <label htmlFor="bill" className="BillingMethod-BillLabel">
             Monthly billing
             <input type="checkbox" name="bill" id="bill" />
           </label>
